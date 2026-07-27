@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "projectionCases": [
+    {
+      "id": "projection-25m-after-10m-at-5x",
+      "realElapsedSeconds": 600,
+      "durationSeconds": 1500,
+      "fastRate": 5,
+      "remainingSeconds": 900,
+      "fastNeedleElapsedSeconds": 3000,
+      "countdownHandAngle": 90
+    },
+    {
+      "id": "projection-speed-does-not-change-deadline",
+      "realElapsedSeconds": 120,
+      "durationSeconds": 600,
+      "fastRate": 0.5,
+      "remainingSeconds": 480,
+      "fastNeedleElapsedSeconds": 60,
+      "countdownHandAngle": 48
+    }
+  ],
+  "cycleCases": [
+    {
+      "id": "first-focus-to-short-break",
+      "phase": "focus",
+      "completedFocusSets": 0,
+      "focusSetsBeforeLongBreak": 4,
+      "expected": "shortBreak"
+    },
+    {
+      "id": "fourth-focus-to-long-break",
+      "phase": "focus",
+      "completedFocusSets": 3,
+      "focusSetsBeforeLongBreak": 4,
+      "expected": "longBreak"
+    },
+    {
+      "id": "break-to-focus",
+      "phase": "shortBreak",
+      "completedFocusSets": 1,
+      "focusSetsBeforeLongBreak": 4,
+      "expected": "focus"
+    }
+  ],
+  "weekCases": [
+    {
+      "id": "sunday-belongs-to-prior-monday",
+      "date": "2026-07-26",
+      "expectedStart": "2026-07-20",
+      "expectedEndExclusive": "2026-07-27"
+    },
+    {
+      "id": "monday-starts-new-week",
+      "date": "2026-07-27",
+      "expectedStart": "2026-07-27",
+      "expectedEndExclusive": "2026-08-03"
+    }
+  ]
+}

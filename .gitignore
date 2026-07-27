@@ -1,0 +1,8 @@
+.DS_Store
+.build/
+Windows/**/bin/
+Windows/**/obj/
+dist/
+tmp/
+output/
+NotebookLM-Raw/

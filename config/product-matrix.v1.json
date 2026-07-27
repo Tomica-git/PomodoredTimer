@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "reservedEditions": ["personal", "pro"],
+  "products": [
+    {
+      "id": "macos-public",
+      "platform": "macos",
+      "edition": "public",
+      "releaseStatus": "public",
+      "compileDefines": ["EDITION_PUBLIC"],
+      "productIdentifier": "jp.tomica.pomodoredtimer.public",
+      "applicationName": "Pomodored Timer Public",
+      "storageNamespace": "pomodored.public.timer.state.v1",
+      "storageKeys": [
+        "pomodored.public.timer.state.v1",
+        "pomodored.public.timer.state.unreadable-backup.v1",
+        "pomodored.public.window.compact.v1",
+        "pomodored.public.window.alwaysOnTop.v1"
+      ],
+      "features": ["timer", "history"],
+      "forbiddenCapabilities": ["personal-media"],
+      "sourceExcludes": [],
+      "builder": { "script": "scripts/build-app.sh", "arguments": [] },
+      "artifactVerifier": "scripts/verify-public-build.sh",
+      "artifactPath": "dist/public/Pomodored Timer Public.app",
+      "sharedContract": "public-core-v1"
+    },
+    {
+      "id": "windows-public",
+      "platform": "windows",
+      "edition": "public",
+      "releaseStatus": "candidate",
+      "compileDefines": [],
+      "productIdentifier": "PomodoredTimer.Windows.Public",
+      "applicationName": "Pomodored Timer Public",
+      "storageNamespace": "%LOCALAPPDATA%\\PomodoredTimer\\Public",
+      "storageKeys": ["state.v1.json", "state.v1.bak"],
+      "features": ["timer", "history"],
+      "forbiddenCapabilities": ["personal-media"],
+      "sourceExcludes": [],
+      "builder": { "script": "scripts/build-windows-public.ps1", "arguments": [] },
+      "artifactVerifier": "scripts/verify-windows-public.ps1",
+      "artifactPath": "dist/windows-public/PomodoredTimer.Windows.Public.exe",
+      "sharedContract": "public-core-v1",
+      "stateIdentity": { "platform": "windows", "edition": "public" }
+    }
+  ]
+}

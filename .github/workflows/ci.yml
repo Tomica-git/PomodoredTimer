@@ -1,0 +1,51 @@
+name: Cross-platform validation
+
+on:
+  push:
+    branches:
+      - main
+      - "feature/**"
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  configuration:
+    name: Product matrix and edition boundaries
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Verify registered products
+        run: node scripts/verify-product-matrix.mjs
+
+  macos:
+    name: macOS public
+    needs: configuration
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Build and inspect public edition
+        run: ./scripts/build-app.sh
+
+  windows:
+    name: Windows public candidate
+    needs: configuration
+    runs-on: windows-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          dotnet-version: "10.0.x"
+      - name: Build, test, publish, and inspect
+        shell: pwsh
+        run: ./scripts/build-windows-public.ps1
+      - name: Upload inspected Windows public artifact
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: PomodoredTimer-Windows-Public-Candidate-win-x64-${{ github.sha }}
+          path: dist/windows-public/
+          if-no-files-found: error
