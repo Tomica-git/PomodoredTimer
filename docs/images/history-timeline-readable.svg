@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="850" viewBox="0 0 1600 850" role="img" aria-labelledby="title desc">
+  <title id="title">Pomodored Timer 作業と休憩の記録</title>
+  <desc id="desc">2026年7月27日の集中6時間30分、休憩1時間25分、完了セット13と、10時から12時台の時刻表</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif; fill: #103637; }
+    .eyebrow { font-size: 25px; font-weight: 850; letter-spacing: 6px; fill: #176668; }
+    .title { font-size: 48px; font-weight: 850; }
+    .nav { font-size: 27px; font-weight: 800; }
+    .date { font-size: 31px; font-weight: 850; }
+    .card-label { font-size: 25px; font-weight: 800; fill: #425f5c; }
+    .card-value { font-size: 38px; font-weight: 850; }
+    .card-note { font-size: 23px; font-weight: 750; fill: #4e6b67; }
+    .section { font-size: 29px; font-weight: 850; }
+    .legend { font-size: 23px; font-weight: 800; }
+    .tab { font-size: 24px; font-weight: 850; }
+    .axis { font-size: 23px; font-weight: 800; fill: #405e5b; font-variant-numeric: tabular-nums; }
+    .session { font-size: 26px; font-weight: 850; fill: #173536; font-variant-numeric: tabular-nums; }
+  </style>
+
+  <rect width="1600" height="850" fill="#dcefe7"/>
+
+  <rect x="18" y="56" width="140" height="46" rx="12" fill="#c5d9d3"/>
+  <path d="M48 69 L36 79 L48 89" fill="none" stroke="#315c5b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="63" y="87" class="nav">タイマー</text>
+
+  <text x="174" y="42" class="eyebrow">POMODORO TRACE</text>
+  <text x="174" y="93" class="title">作業と休憩の記録</text>
+
+  <rect x="1270" y="16" width="90" height="52" rx="13" fill="#17686a"/>
+  <rect x="1366" y="16" width="90" height="52" rx="13" fill="#ceded9"/>
+  <rect x="1462" y="16" width="90" height="52" rx="13" fill="#ceded9"/>
+  <text x="1315" y="50" text-anchor="middle" class="tab" fill="#fff" style="fill:#fff">日</text>
+  <text x="1411" y="50" text-anchor="middle" class="tab">週</text>
+  <text x="1507" y="50" text-anchor="middle" class="tab">月</text>
+
+  <rect x="1050" y="75" width="46" height="46" rx="12" fill="#c5d9d3"/>
+  <path d="M1078 87 L1066 98 L1078 109" fill="none" stroke="#315c5b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1235" y="108" text-anchor="middle" class="date">2026年7月27日(月)</text>
+  <rect x="1415" y="75" width="46" height="46" rx="12" fill="#c5d9d3"/>
+  <path d="M1433 87 L1445 98 L1433 109" fill="none" stroke="#315c5b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="1474" y="75" width="78" height="46" rx="12" fill="#c5d9d3"/>
+  <text x="1513" y="106" text-anchor="middle" class="nav">今日</text>
+
+  <rect x="18" y="154" width="492" height="140" rx="28" fill="#eff8f3"/>
+  <circle cx="80" cy="224" r="34" fill="#f8e9e4"/>
+  <circle cx="80" cy="224" r="17" fill="none" stroke="#ef5048" stroke-width="5"/>
+  <path d="M80 207 L80 224 L92 232" fill="none" stroke="#ef5048" stroke-width="5" stroke-linecap="round"/>
+  <text x="132" y="197" class="card-label">ポモドーロ作業</text>
+  <text x="132" y="242" class="card-value">6時間30分</text>
+  <text x="132" y="270" class="card-note">赤バーの合計</text>
+
+  <rect x="528" y="154" width="492" height="140" rx="28" fill="#eff8f3"/>
+  <circle cx="590" cy="224" r="34" fill="#dfedf3"/>
+  <path d="M573 217 H599 V230 H573 Z M599 220 H608 Q613 220 613 225 Q613 230 608 230 H599" fill="none" stroke="#337fba" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M569 237 Q590 247 611 237" fill="none" stroke="#337fba" stroke-width="5" stroke-linecap="round"/>
+  <text x="642" y="197" class="card-label">休憩</text>
+  <text x="642" y="242" class="card-value">1時間25分</text>
+  <text x="642" y="270" class="card-note">青バーの合計</text>
+
+  <rect x="1038" y="154" width="514" height="140" rx="28" fill="#eff8f3"/>
+  <circle cx="1100" cy="224" r="34" fill="#d6e9e3"/>
+  <circle cx="1100" cy="224" r="18" fill="#17686a"/>
+  <path d="M1091 224 L1098 231 L1111 215" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1152" y="197" class="card-label">完了セット</text>
+  <text x="1152" y="242" class="card-value">13</text>
+  <text x="1152" y="270" class="card-note">最後まで集中</text>
+
+  <rect x="18" y="330" width="1534" height="500" rx="30" fill="#f0f8f3" stroke="#c7ddd5" stroke-width="2"/>
+  <text x="52" y="402" class="section">1日の時刻</text>
+
+  <rect x="1092" y="383" width="22" height="12" rx="3" fill="#ef5048"/>
+  <text x="1123" y="397" class="legend">集中</text>
+  <rect x="1178" y="383" width="22" height="12" rx="3" fill="#337fba"/>
+  <text x="1209" y="397" class="legend">休憩</text>
+
+  <rect x="1265" y="366" width="134" height="56" rx="14" fill="#17686a"/>
+  <text x="1332" y="402" text-anchor="middle" class="tab" style="fill:#fff">時刻表</text>
+  <rect x="1407" y="366" width="122" height="56" rx="14" fill="#dce7e2"/>
+  <text x="1468" y="402" text-anchor="middle" class="tab">棒グラフ</text>
+
+  <line x1="146" y1="448" x2="1510" y2="448" stroke="#c6d9d4" stroke-width="2"/>
+  <line x1="146" y1="577" x2="1510" y2="577" stroke="#c6d9d4" stroke-width="2"/>
+  <line x1="146" y1="706" x2="1510" y2="706" stroke="#c6d9d4" stroke-width="2"/>
+  <text x="62" y="472" class="axis">10:00</text>
+  <text x="62" y="601" class="axis">11:00</text>
+  <text x="62" y="730" class="axis">12:00</text>
+
+  <rect x="146" y="466" width="1360" height="56" rx="8" fill="#eb5b52"/>
+  <rect x="160" y="476" width="250" height="36" rx="7" fill="#fff2ec"/>
+  <text x="174" y="501" class="session">集中 10:09–10:39</text>
+  <rect x="146" y="525" width="1360" height="8" rx="4" fill="#337fba"/>
+
+  <rect x="146" y="540" width="1360" height="56" rx="8" fill="#eb5b52"/>
+  <rect x="160" y="550" width="250" height="36" rx="7" fill="#fff2ec"/>
+  <text x="174" y="575" class="session">集中 10:44–11:14</text>
+  <rect x="146" y="599" width="1360" height="8" rx="4" fill="#337fba"/>
+
+  <rect x="146" y="614" width="1360" height="56" rx="8" fill="#eb5b52"/>
+  <rect x="160" y="624" width="250" height="36" rx="7" fill="#fff2ec"/>
+  <text x="174" y="649" class="session">集中 11:23–11:53</text>
+  <rect x="146" y="673" width="1360" height="8" rx="4" fill="#337fba"/>
+
+  <rect x="146" y="688" width="1360" height="56" rx="8" fill="#eb5b52"/>
+  <rect x="160" y="698" width="250" height="36" rx="7" fill="#fff2ec"/>
+  <text x="174" y="723" class="session">集中 11:58–12:28</text>
+</svg>
